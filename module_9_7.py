@@ -1,6 +1,6 @@
 def is_prime(func):
-    def wrapper(*args, ** kwargs):
-        sum_three = func(*args, **kwargs)
+    def wrapper(*args):
+        sum_three = func(*args)
         if sum_three > 1:
             for i in range(2, int(sum_three ** 0.5) + 1):
                 if sum_three % i == 0:
